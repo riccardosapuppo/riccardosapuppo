@@ -38,6 +38,32 @@ that goes red if it becomes wrong. Not a badge — a measurement.
 > express three of the questions at all. Flattening fixes all but one — the
 > rename — and that one needs an id, which is the whole finding.
 
+**[patient-portal-suite](https://github.com/riccardosapuppo/patient-portal-suite)** — a portal where patients read their own reports, and only their own.
+
+> Four routes that begin identically: read the signed-in patient from the
+> session, load them, write them into the audit line. Two then put that patient
+> into the question asked of the archive and two do not, and **reading the four
+> methods will not tell you which**. Over 90 questions, the two that do not hand
+> over **70** documents belonging to somebody else — and write **70** audit lines
+> saying they were handed to their owner.
+>
+> The repair is not four checks. A check is a line that can be absent, and this
+> is a demonstration that an absent line is invisible. The archive has no method
+> that takes a document identifier on its own, so the wrong version does not fail
+> review: it fails to compile.
+
+**[nautical-rental-portal](https://github.com/riccardosapuppo/nautical-rental-portal)** — a charter site that let the customer choose what to pay.
+
+> Not through a field called price. The price was fetched from the supplier,
+> written into the reply as a hidden input, posted to the next page, echoed into
+> another hidden input, posted again, and written into the booking — with the
+> deposit worked out as `$_POST['newprice']/2`. **Four money fields and the
+> deposit, every one of them from the browser.**
+>
+> The old flow takes **5 of 5** tampered submissions, including a total of one
+> cent and a negative one. `confirm()` now takes a quote reference and a
+> customer, and there is nowhere to put a price.
+
 **[pacs-analytics-monitoring](https://github.com/riccardosapuppo/pacs-analytics-monitoring)** — analytics over an archive whose schema you do not own and that differs at every installation.
 
 > Six installations holding the same studies. The side that reads the schema
@@ -57,6 +83,7 @@ that goes red if it becomes wrong. Not a badge — a measurement.
 
 **Healthcare, patient-facing** — [multi-tenant booking](https://github.com/riccardosapuppo/multi-tenant-booking)
 · [a booking agent that knows when to hand over](https://github.com/riccardosapuppo/conversational-booking-agent)
+· [reports, to the patient they belong to](https://github.com/riccardosapuppo/patient-portal-suite)
 
 **Documents** — [OCR as an internal service](https://github.com/riccardosapuppo/document-ocr-service)
 · [questions about a document set](https://github.com/riccardosapuppo/document-chat-assistant)
@@ -65,9 +92,11 @@ that goes red if it becomes wrong. Not a badge — a measurement.
 
 **Desktop and devices** — [teaching somebody a Windows application](https://github.com/riccardosapuppo/windows-app-guided-tour)
 · [printer meters over SNMP](https://github.com/riccardosapuppo/printer-meter-collector)
+· [deciding from pixels whether anybody is logged in](https://github.com/riccardosapuppo/remote-support-console)
 
 **The rest** — [campaigns that cannot write to somebody who said stop](https://github.com/riccardosapuppo/campaign-automation)
 · [a TOTP authenticator](https://github.com/riccardosapuppo/totp-authenticator)
+· [a charter portal where the price is not a form field](https://github.com/riccardosapuppo/nautical-rental-portal)
 
 ---
 
@@ -84,10 +113,19 @@ lexicographically, which is the one gift that format gives you.
 The Node projects have **no runtime dependencies at all** — `node:sqlite`,
 `node:http`, `node:fs` — and no build step: they are TypeScript that Node runs
 directly, with `erasableSyntaxOnly` set so the type check is also the proof that
-they still run without one.
+they still run without one. The C# ones carry no packages beyond the test
+runner, and the PHP one carries none beyond it either.
 
-`TypeScript` · `Node.js` · `Angular` · `React` · `Electron` · `Python` ·
-`PostgreSQL` · `SQL Server` · `SQLite` · `Docker`
+Three of them also make an argument about **types rather than checks**. A
+document archive with no method that takes an identifier on its own; a booking
+that takes a quote reference and has nowhere to put a price; a receipt for a
+second factor whose constructor is internal, so a page cannot decide on its own
+that a code was verified. In each case the dangerous version is not guarded —
+it is unwritable, and a test asserts that by reflection so it stays that way.
+
+`TypeScript` · `Node.js` · `C#` · `.NET 9` · `ASP.NET Core` · `WPF` · `PHP` ·
+`WordPress` · `Angular` · `React` · `Electron` · `Python` · `PostgreSQL` ·
+`SQL Server` · `SQLite` · `Docker`
 
 ---
 
