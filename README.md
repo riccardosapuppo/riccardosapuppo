@@ -52,18 +52,6 @@ that goes red if it becomes wrong. Not a badge — a measurement.
 > that takes a document identifier on its own, so the wrong version does not fail
 > review: it fails to compile.
 
-**[nautical-rental-portal](https://github.com/riccardosapuppo/nautical-rental-portal)** — a charter site that let the customer choose what to pay.
-
-> Not through a field called price. The price was fetched from the supplier,
-> written into the reply as a hidden input, posted to the next page, echoed into
-> another hidden input, posted again, and written into the booking — with the
-> deposit worked out as `$_POST['newprice']/2`. **Four money fields and the
-> deposit, every one of them from the browser.**
->
-> The old flow takes **5 of 5** tampered submissions, including a total of one
-> cent and a negative one. `confirm()` now takes a quote reference and a
-> customer, and there is nowhere to put a price.
-
 **[pacs-analytics-monitoring](https://github.com/riccardosapuppo/pacs-analytics-monitoring)** — analytics over an archive whose schema you do not own and that differs at every installation.
 
 > Six installations holding the same studies. The side that reads the schema
@@ -96,7 +84,6 @@ that goes red if it becomes wrong. Not a badge — a measurement.
 
 **The rest** — [campaigns that cannot write to somebody who said stop](https://github.com/riccardosapuppo/campaign-automation)
 · [a TOTP authenticator](https://github.com/riccardosapuppo/totp-authenticator)
-· [a charter portal where the price is not a form field](https://github.com/riccardosapuppo/nautical-rental-portal)
 
 ---
 
