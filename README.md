@@ -4,8 +4,10 @@ Full-stack developer in Catania. Most of what I build ends up in a clinic, a
 radiology archive, or somebody's back office. In places like those, being
 approximately right is worse than being obviously wrong, because nobody notices.
 
-I rebuild that work here, from scratch, with invented data. Not to show that it
-runs: to show what it took to be sure it was right.
+I reconstruct that work here, from scratch, so there is something to open and
+run. Not to show that it runs: to show what it took to be sure it was right.
+What carries over is the shape of the problem; the code is newly written and the
+data invented.
 
 ---
 
@@ -139,9 +141,9 @@ that way.
 
 ## A note on the originals
 
-Every one of these was built for a client, and every original is a production
-system that lives in a private repository. Confidentiality and intellectual
-property constraints mean none of them can be published.
+Every project here is based on a real production system I designed or
+developed. The originals stay in private repositories: confidentiality and
+intellectual property constraints mean none of them can be published.
 
 These repositories are reconstructions. Each was rebuilt from scratch so it
 could be shown and run, preserving the core architecture, the workflows and the
