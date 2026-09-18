@@ -158,3 +158,7 @@ differently, and why.
 
 The limits are in the READMEs too, in their own section, and they are real ones.
 A portfolio piece without them is a brochure.
+
+---
+
+Write to me: [info@riccardosapuppo.com](mailto:info@riccardosapuppo.com).
