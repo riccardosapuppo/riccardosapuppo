@@ -17,6 +17,32 @@ That is the one thing these have in common, and it is the point of them. Each
 repository opens with a sentence that could be wrong, and each has a command
 that goes red if it becomes wrong. That command is a measurement, not a badge.
 
+### [order-email-extraction](https://github.com/riccardosapuppo/order-email-extraction)
+
+Orders rebuilt from a folder of email, read by rules or by a language model.
+
+> *A value has to point at the words it was read from.* A rule knows where it
+> matched. A model is asked for the text it read and never for an offset, because
+> asked for a character offset it will give you a plausible integer. Every quote
+> it gives back is searched for in the message, and what it could not have read
+> is **dropped** rather than stored with a confidence beside it. Anthropic,
+> Mistral or OpenAI, chosen on the first screen: the checking is the same for all
+> three, because it is about the contract and not about whose model honours it,
+> and `npm test` runs each of them with the network stubbed out.
+
+### [document-chat-assistant](https://github.com/riccardosapuppo/document-chat-assistant)
+
+Questions about a set of manuals, answered two ways side by side.
+
+> *A vector search is the wrong tool for a large share of what people ask a
+> manual, and it fails confidently, with a citation.* Twelve questions with a
+> known answer, judged on the first result only: similarity alone gets **6**
+> right, looking at the kind of question first gets **9**. The difference is
+> all in two places, codes like `E-4412` that have no semantic neighbours and
+> questions phrased in the document's own words, and the run fails if any
+> question plain similarity got right is traded away. Where the question's words
+> are not the document's, both score **zero**, and the page says so.
+
 ### [pacs-maintenance-tasker](https://github.com/riccardosapuppo/pacs-maintenance-tasker)
 
 A job that deletes medical images it cannot get back.
@@ -92,7 +118,7 @@ installation.
 
 [OCR as an internal service](https://github.com/riccardosapuppo/document-ocr-service)
 · [questions about a document set](https://github.com/riccardosapuppo/document-chat-assistant)
-· [rebuilding an order from a folder of email](https://github.com/riccardosapuppo/order-email-extraction)
+· [rebuilding an order from a folder of email, with rules or a language model](https://github.com/riccardosapuppo/order-email-extraction)
 · [forms as a relational schema](https://github.com/riccardosapuppo/dynamic-form-builder)
 
 **Desktop and devices**
@@ -134,7 +160,8 @@ It cannot be written at all, and a test asserts that by reflection so it stays
 that way.
 
 `TypeScript` · `Node.js` · `C#` · `.NET 9` · `ASP.NET Core` · `WPF` · `PHP` ·
-`WordPress` · `Angular` · `React` · `Electron` · `Python` · `PostgreSQL` ·
+`WordPress` · `Angular` · `React` · `Electron` · `Python` · `FastAPI` ·
+`LangGraph` · `Anthropic, Mistral and OpenAI APIs` · `PostgreSQL` ·
 `SQL Server` · `SQLite` · `Docker`
 
 ---
