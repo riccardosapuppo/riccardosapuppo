@@ -7,7 +7,9 @@ approximately right is worse than being obviously wrong, because nobody notices.
 I reconstruct that work here, from scratch, so there is something to open and
 run. Not to show that it runs: to show what it took to be sure it was right.
 What carries over is the shape of the problem; the code is newly written and the
-data invented.
+data invented. Not all of it: two projects are mine from the start, and one is a
+fork of the open-source viewer its original was built on. The note at the bottom
+says which.
 
 ---
 
@@ -101,6 +103,11 @@ installation.
 
 ## The work
 
+**My own**
+
+[a page builder and CMS, on Rails and React](https://github.com/riccardosapuppo/page-builder-cms)
+· [GPS audio guides for Sicilian cities, live at walkaround.cloud](https://github.com/riccardosapuppo/walkaround)
+
 **Medical imaging**
 
 [DICOM viewer, web](https://github.com/riccardosapuppo/medical-dicom-viewer-web)
@@ -161,24 +168,33 @@ that way.
 
 `TypeScript` · `Node.js` · `C#` · `.NET 9` · `ASP.NET Core` · `WPF` · `PHP` ·
 `WordPress` · `Angular` · `React` · `Electron` · `Python` · `FastAPI` ·
-`LangGraph` · `Anthropic, Mistral and OpenAI APIs` · `PostgreSQL` ·
-`SQL Server` · `SQLite` · `Docker`
+`LangGraph` · `Anthropic, Mistral and OpenAI APIs` · `Ruby on Rails` · `Ruby` ·
+`PostgreSQL` · `SQL Server` · `SQLite` · `Docker`
 
 ---
 
 ## A note on the originals
 
-Every project here is based on a real production system I designed or
+Most projects here are based on a real production system I designed or
 developed. The originals stay in private repositories: confidentiality and
 intellectual property constraints mean none of them can be published.
 
-These repositories are reconstructions. Each was rebuilt from scratch so it
+Those repositories are reconstructions. Each was rebuilt from scratch so it
 could be shown and run, preserving the core architecture, the workflows and the
 technical challenges of the production solution, with newly written code and
 fictional data. No proprietary source code, confidential data or client assets
 from an original are included in any of them. What the data describes is
 invented in the repository itself: no clinic, no patient, no real archive, no
 customer list.
+
+One is not a reconstruction: the web DICOM viewer is an independent version
+built on the same open-source base as its original, OHIF, at the same version,
+and it reads real studies from public research collections, cited with their
+licences. Its original stays with the client and is not there either.
+
+Two are mine from the start, with no client and no original: Page Builder CMS
+and Walk Around. Their repositories are the projects themselves, except that
+Walk Around's leaves out the audio guides, which are the product.
 
 Each README says what the original did, what the reconstruction does
 differently, and why.
